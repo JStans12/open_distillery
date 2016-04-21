@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet"; type="text/css"; href="stylesheet.css">
+<script type="text/javascript"; src="calc.js"></script>
+<script type="text/javascript"; src="table_1array.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript"; src="jq.js"></script>
+
+</head>
+<body>
+
+<div id="header">
+<h1>Proofer.com</h1>
+</div>
+
+<div id="fullContent">
+<div id="main">
+<div>
+<table id="TP">
+	<th colspan=2> Proof </th>
+		<tr>
+			<td>Hydrometer</td>
+			<td class="in"><input type="text"; id="hydrometerTP"></td>
+		</tr>
+		<tr>
+			<td>Thermometer (F)</td>
+			<td class="in"><input type="text"; id="thermometerTP"></td>
+		</tr>
+		<tr>
+			<td>True Proof</td>
+			<td class="out"; id="outTP"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcTP()">Calculate</button></td>
+		</tr>
+</table>
+<p></p>
+<table id="Vol">
+	<th colspan=2> Volume </th>
+		<tr>
+			<td>Proof</td>
+			<td class="in"><input type="text"; id="proofVol"></td>
+		</tr>
+		<tr>
+			<td>Weight (lbs)</td>
+			<td class="in"><input type="text"; id="weightVol"></td>
+		</tr>
+		<tr>
+			<td>Volume (L)</td>
+			<td class="out"; id="outVol"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcVol()">Calculate</button></td>
+		</tr>
+</table>
+</div>
+
+<div>
+<table id="DP">
+	<th colspan=2> Dilute </th>
+		<tr>
+			<td>Starting Proof</td>
+			<td class="in"><input type="text"; id="startingProofDP"></td>
+		</tr>
+		<tr>
+			<td>Final Proof</td>
+			<td class="in"><input type="text"; id="finalProofDP"></td>
+		</tr>
+		<tr>
+			<td>Starting Volume (L)</td>
+			<td class="in"><input type="text"; id="startingVolumeDP"></td>
+		</tr>
+		<tr>
+			<td>Final Volume (L)</td>
+			<td class="out"; id="outFinal"></td>
+		</tr>
+		<tr>
+			<td>Water to Add</td>
+			<td class="out"; id="outWater"></td>
+		</tr>
+		<tr>
+			<td>Proof Gallons</td>
+			<td class="out"; id="outPGs"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcDP()">Calculate</button></td>
+		</tr>
+	</table>
+<p id="errors"></p>
+</div>
+</div>
+<div id="spacer"></div>
+<div id="about"><p>This calculator uses table_1 to correct proof readings based on temperature. Table_1 works with hydrometers that are calibrated at 60 degrees Fahrenheit and can handle most readings between 0 and 200 proof; from 1°F to 100°F. It is somewhat limited at very high and very low temperatures. You can find more information on this method in the TTB GAUGING MANUAL. You can download a typed version of table_1 HERE. I hand-typed this table and can't guarantee 100% accuracy. Please let me know if you find a mistake.</p></div>
+</div>
+			
+</body>
+</html>
