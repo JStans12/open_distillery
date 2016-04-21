@@ -9,4 +9,9 @@ $(document).ready(function(){
 			calcDP();
 		}
 	});
+	$('#thermometerTP').keypress(function(key){
+		if( key.which === 13){
+			calcTP();
+		}
+	});
 });
