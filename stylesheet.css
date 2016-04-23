@@ -2,23 +2,47 @@ body{
 	background-color: Gainsboro;
 }
 
-#banner{
-	font-size: 40px;
-	font-family: Courier New;
-	text-align: left;
-	margin: 0px 0px 0px 125px;
-}
-
-#headroom{
-	height: 6px;
-}
-
 #header{
 	height: 75px;
 	background-color: DarkGray;
 	margin: 0px 0px 0px 0px;
-	text-align: center;
+	position: relative;
 }
+
+#banner{
+	font-size: 20px;
+	font-family: Courier New;
+	position: absolute;
+	left: 125px;
+}
+
+.tab{
+	border: solid black 1px;
+	height: 25px;
+	width: 55px;
+	padding: 5px;
+	position: absolute;
+	top: 30px;
+}
+
+#tabMain{
+	position: absolute;
+	left: 600px;
+	bottom: 0px;
+}
+
+#tabMash{
+	position: absolute;
+	left: 680px;
+	bottom: 0px;
+}
+
+.tabTitle{
+	margin: auto;
+	position: absolute;
+	top: 5px;
+}
+
 div div{
 	display: inline-block;
 }
@@ -87,4 +111,5 @@ button:hover{
 	line-height: 1.5em;
 	float: left;
 	margin: 0px 0px 0px 50px;
+	overflow: auto;
 }
