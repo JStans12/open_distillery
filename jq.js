@@ -17,6 +17,12 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+	$('#tabProof').addClass('tabActive');
+	$('#aboutDilute').hide();
+	$('#aboutConvert').hide();
+});
+
+$(document).ready(function(){
 	$('.tab').mouseenter(function(){
 		$(this).addClass('tabHover');
 	});
@@ -26,5 +32,23 @@ $(document).ready(function(){
 	$('.tab').click(function(){
 		$('.tab').removeClass('tabActive');
 		$(this).addClass('tabActive');
+	});
+});
+
+$(document).ready(function(){
+	$('#tabProof').click(function(){
+		$('#aboutDilute').hide();
+		$('#aboutConvert').hide();
+		$('#aboutProof').show();
+	});
+	$('#tabDilute').click(function(){
+		$('#aboutProof').hide();
+		$('#aboutConvert').hide();
+		$('#aboutDilute').show();
+	});
+	$('#tabConvert').click(function(){
+		$('#aboutProof').hide();
+		$('#aboutDilute').hide();
+		$('#aboutConvert').show();
 	});
 });

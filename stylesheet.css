@@ -26,11 +26,12 @@ body{
 }
 
 .tabHover{
-	background-color: lightsalmon;
+	border: solid dimgray 1px;
 }
 
 .tabActive{
-	background-color: coral;
+	border: solid dimgray 1px;
+	background-color: dimgray;
 }
 
 #tabProof{
@@ -50,32 +51,17 @@ body{
 
 .tabTitle{
 	margin: auto;
+	font-family: Georgia;
+	font-size: 14px;
 	position: absolute;
 }
 
-div div{
-	display: inline-block;
-}
-
-#main{
+.calc{
 	border-radius: 10px;
 	background-color: PaleGreen;
 	display: inline-block;
 	float: left;
 	margin: 25px 0px 0px 50px;
-}
-
-div div div{
-	display: inline-block;
-	vertical-align: top;
-}
-
-#errors{
-	width: 235px;
-	color: red;
-	font-family: Courier;
-	font-size: 12px;
-	margin: 15px 2px 10px 12px;
 }
 
 table{
@@ -112,6 +98,19 @@ button:hover{
 	font-size: 12px;
 	color: blue;
 	text-align: center;
+}
+
+div div div{
+	display: inline-block;
+	vertical-align: top;
+}
+
+#errors{
+	width: 235px;
+	color: red;
+	font-family: Courier;
+	font-size: 12px;
+	margin: 15px 2px 10px 12px;
 }
 
 #about{
