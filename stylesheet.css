@@ -14,6 +14,7 @@ body{
 	font-family: Courier New;
 	position: absolute;
 	left: 125px;
+	top: -5px;
 }
 
 .tab{
@@ -56,12 +57,12 @@ body{
 	position: absolute;
 }
 
-.calc{
+#calc{
 	border-radius: 10px;
 	background-color: PaleGreen;
-	display: inline-block;
-	float: left;
-	margin: 25px 0px 0px 50px;
+	position: absolute;
+	left: 50px;
+	top: 110px;
 }
 
 table{
@@ -118,7 +119,8 @@ div div div{
 	font-family: Georgia;
 	font-size: 14px;
 	line-height: 1.5em;
-	float: left;
-	margin: 0px 0px 0px 50px;
+	position: absolute;
+	left: 605px;
+	top: 95px;
 	overflow: auto;
 }
