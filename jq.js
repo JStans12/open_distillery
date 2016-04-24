@@ -20,6 +20,8 @@ $(document).ready(function(){
 	$('#tabProof').addClass('tabActive');
 	$('#aboutDilute').hide();
 	$('#aboutConvert').hide();
+	$('#dilute').hide();
+	$('#convert').hide();
 });
 
 $(document).ready(function(){
@@ -40,15 +42,24 @@ $(document).ready(function(){
 		$('#aboutDilute').hide();
 		$('#aboutConvert').hide();
 		$('#aboutProof').show();
+		$('#dilute').hide();
+		$('#convert').hide();
+		$('#proof').show();
 	});
 	$('#tabDilute').click(function(){
 		$('#aboutProof').hide();
 		$('#aboutConvert').hide();
 		$('#aboutDilute').show();
+		$('#proof').hide();
+		$('#convert').hide();
+		$('#dilute').show();
 	});
 	$('#tabConvert').click(function(){
 		$('#aboutProof').hide();
 		$('#aboutDilute').hide();
 		$('#aboutConvert').show();
+		$('#proof').hide();
+		$('#dilute').hide();
+		$('#convert').show();
 	});
 });
