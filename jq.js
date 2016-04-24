@@ -15,3 +15,16 @@ $(document).ready(function(){
 		}
 	});
 });
+
+$(document).ready(function(){
+	$('.tab').mouseenter(function(){
+		$(this).addClass('tabHover');
+	});
+	$('.tab').mouseleave(function(){
+		$(this).removeClass('tabHover');
+	});
+	$('.tab').click(function(){
+		$('.tab').removeClass('tabActive');
+		$(this).addClass('tabActive');
+	});
+});

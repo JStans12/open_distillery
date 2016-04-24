@@ -17,7 +17,7 @@ body{
 }
 
 .tab{
-	border: solid black 1px;
+	border: solid Gainsboro 1px;
 	height: 25px;
 	width: 55px;
 	padding: 5px;
@@ -25,22 +25,32 @@ body{
 	top: 30px;
 }
 
-#tabMain{
-	position: absolute;
-	left: 600px;
-	bottom: 0px;
+.tabHover{
+	background-color: lightsalmon;
 }
 
-#tabMash{
+.tabActive{
+	background-color: coral;
+}
+
+#tabProof{
+	position: absolute;
+	left: 600px;
+}
+
+#tabDilute{
 	position: absolute;
 	left: 680px;
-	bottom: 0px;
+}
+
+#tabConvert{
+	position: absolute;
+	left: 760px;
 }
 
 .tabTitle{
 	margin: auto;
 	position: absolute;
-	top: 5px;
 }
 
 div div{
