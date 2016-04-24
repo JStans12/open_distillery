@@ -13,7 +13,7 @@ body{
 	font-size: 20px;
 	font-family: Courier New;
 	position: absolute;
-	left: 125px;
+	left: 115px;
 	top: -5px;
 }
 
@@ -71,6 +71,8 @@ table{
 	font-family: Helvetica;
 	font-size: 12px;
 	margin: 10px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 td{
