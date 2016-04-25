@@ -19,10 +19,12 @@
 </div>
 
 <div id="fullContent">
+
 <div id="calc">
+
 <div id="proof">
 <table>
-	<th colspan=2> Proof </th>
+	<th class="tTop"; colspan=2> Proof </th>
 		<tr>
 			<td>Hydrometer</td>
 			<td class="in"><input type="text"; id="hydrometerTP"></td>
@@ -40,26 +42,37 @@
 			<td><button onclick="calcTP()">Calculate</button></td>
 		</tr>
 </table>
-<table>
-	<th colspan=2> Interpolation </th>
+<table id="interpolation">
+	<th class="tTop"; colspan=4> Interpolation </th>
 		<tr>
-			<td>Proof / Temp</td>
-			<td class="outI"; id="PT"></td>
+			<td class="tdInt"></td>
+			<th colspan=2; class="tdInt">Index</th>
+			<th class="tdInt">Value</th>
 		</tr>
 		<tr>
-			<td>Proof+1 / Temp</td>
-			<td class="outI"; id="PoT"></td>
+			<td class="tdInt">P/T</td>
+			<td class="outI tdInt"; id="PT"></td>
+			<td class="tdInt"></td>
+			<td class="tdInt"></td>
 		</tr>
 		<tr>
-			<td>Proof / Temp+1</td>
-			<td class="outI"; id="PTo"></td>
+			<td class="tdInt">P+1/T</td>
+			<td class="outI tdInt"; id="PoT"></td>
+			<td class="tdInt"></td>
+			<td class="tdInt"></td>
+		</tr>
+		<tr>
+			<td class="tdInt">P/T+1</td>
+			<td class="outI tdInt"; id="PTo"></td>
+			<td class="tdInt"></td>
+			<td class="tdInt"></td>
 		</tr>
 </table>
 </div>
 
 <div id="dilute">
 <table>
-	<th colspan=2> Dilute </th>
+	<th class="tTop"; colspan=2> Dilute </th>
 		<tr>
 			<td>Starting Proof</td>
 			<td class="in"><input type="text"; id="startingProofDP"></td>
@@ -93,7 +106,7 @@
 	
 <div id="convert">
 <table>
-	<th colspan=2> Volume </th>
+	<th class="tTop"; colspan=2> Volume </th>
 		<tr>
 			<td>Proof</td>
 			<td class="in"><input type="text"; id="proofVol"></td>
@@ -114,6 +127,7 @@
 </div>
 	
 <p id="errors"></p>
+
 </div>
 
 <div id="about">

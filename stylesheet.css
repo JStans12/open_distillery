@@ -75,6 +75,16 @@ table{
 	vertical-align: top;
 }
 
+.tTop{
+	padding: 7px;
+}
+
+.tdInt{
+	border: 1px black solid;
+	height: 25px;
+	width: 52px;
+}
+
 td{
 	height: 25px;
 	width: 110px
