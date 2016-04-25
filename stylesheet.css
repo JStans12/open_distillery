@@ -2,46 +2,67 @@ body{
 	background-color: Gainsboro;
 }
 
-#banner{
-	font-size: 40px;
-	font-family: Courier New;
-	text-align: left;
-	margin: 0px 0px 0px 125px;
-}
-
-#headroom{
-	height: 6px;
-}
-
 #header{
 	height: 75px;
 	background-color: DarkGray;
 	margin: 0px 0px 0px 0px;
-	text-align: center;
-}
-div div{
-	display: inline-block;
+	position: relative;
 }
 
-#main{
+#banner{
+	font-size: 20px;
+	font-family: Courier New;
+	position: absolute;
+	left: 115px;
+	top: -5px;
+}
+
+.tab{
+	border: solid Gainsboro 1px;
+	height: 25px;
+	width: 55px;
+	padding: 5px;
+	position: absolute;
+	top: 30px;
+}
+
+.tabHover{
+	border: solid dimgray 1px;
+}
+
+.tabActive{
+	border: solid dimgray 1px;
+	background-color: dimgray;
+}
+
+#tabProof{
+	position: absolute;
+	left: 600px;
+}
+
+#tabDilute{
+	position: absolute;
+	left: 680px;
+}
+
+#tabConvert{
+	position: absolute;
+	left: 760px;
+}
+
+.tabTitle{
+	margin: auto;
+	font-family: Georgia;
+	font-size: 14px;
+	position: absolute;
+}
+
+#calc{
 	border-radius: 10px;
 	background-color: PaleGreen;
-	display: inline-block;
-	float: left;
-	margin: 25px 0px 0px 50px;
-}
-
-div div div{
-	display: inline-block;
-	vertical-align: top;
-}
-
-#errors{
-	width: 235px;
-	color: red;
-	font-family: Courier;
-	font-size: 12px;
-	margin: 15px 2px 10px 12px;
+	position: absolute;
+	left: 50px;
+	top: 110px;
 }
 
 table{
@@ -50,6 +71,12 @@ table{
 	font-family: Helvetica;
 	font-size: 12px;
 	margin: 10px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.tTop{
+	padding: 7px;
 }
 
 td{
@@ -80,11 +107,37 @@ button:hover{
 	text-align: center;
 }
 
+div div div{
+	display: inline-block;
+	vertical-align: top;
+}
+
+
+#interpolation{
+	border: 0px;
+	border-collapse: collapse;
+}
+
+.tdInt{
+	border: 1px solid black;
+	height: 25px;
+	width: 54px;
+	text-align: center;
+}
+
+.errors{
+	color: red;
+	font-family: Courier;
+	font-size: 12px;
+}
+
 #about{
 	width: 325px;
 	font-family: Georgia;
 	font-size: 14px;
 	line-height: 1.5em;
-	float: left;
-	margin: 0px 0px 0px 50px;
+	position: absolute;
+	left: 605px;
+	top: 95px;
+	overflow: auto;
 }
