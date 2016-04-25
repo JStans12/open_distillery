@@ -2,11 +2,11 @@ function calcTP(){
 	var hydrometerTP = +document.getElementById("hydrometerTP").value;
 	if(isNaN(hydrometerTP)){
 		document.getElementById("errors").innerHTML = "Input is not a number.";
-		document.getElementById("outTP").innerHTML = " ";
+		errorTP();
 	}
 	if(hydrometerTP > 203 || hydrometerTP < 0){
 		document.getElementById("errors").innerHTML = "Your readings are outside the working range of table_1.";
-		document.getElementById("outTP").innerHTML = " ";
+		errorTP();
 	}
 	var iHydrometerTP = Math.trunc(hydrometerTP);
 	var fHydrometerTP = (hydrometerTP%1).toFixed(1);
@@ -18,17 +18,39 @@ function calcTP(){
 	var PTo = twoDT[iHydrometerTP][iThermometerTP];
 	if(thermometerTP > 99 || thermometerTP < 1){
 		document.getElementById("errors").innerHTML = "Thermometer must be between 1-99.";
-		document.getElementById("outTP").innerHTML = " ";
+		errorTP();
 	} else if(isNaN(thermometerTP) || document.getElementById("hydrometerTP").value === '' || document.getElementById("thermometerTP").value === ''){
 		document.getElementById("errors").innerHTML = "Input is not a number.";
-		document.getElementById("outTP").innerHTML = " ";
+		errorTP();
 	} else if(PT === 0 || PoT === 0 || PTo === 0){
 		document.getElementById("errors").innerHTML = "Your readings are outside the working range of table_1.";
-		document.getElementById("outTP").innerHTML = " ";
+		errorTP();
 	} else {
 		document.getElementById("outTP").innerHTML = (PT+(fHydrometerTP*(PoT-PT))-(fThermometerTP*Math.abs(PTo-PT))).toFixed(1);
 		document.getElementById("errors").innerHTML = " ";
+		document.getElementById("interpolation").rows[2].cells[1].innerHTML = iHydrometerTP;
+		document.getElementById("interpolation").rows[2].cells[2].innerHTML = iThermometerTP;
+		document.getElementById("interpolation").rows[2].cells[3].innerHTML = PT;
+		document.getElementById("interpolation").rows[3].cells[1].innerHTML = iHydrometerTP+1;
+		document.getElementById("interpolation").rows[3].cells[2].innerHTML = iThermometerTP;
+		document.getElementById("interpolation").rows[3].cells[3].innerHTML = PoT;
+		document.getElementById("interpolation").rows[4].cells[1].innerHTML = iHydrometerTP;
+		document.getElementById("interpolation").rows[4].cells[2].innerHTML = iThermometerTP+1;
+		document.getElementById("interpolation").rows[4].cells[3].innerHTML = PTo;
 	}
+}
+
+function errorTP(){
+	document.getElementById("outTP").innerHTML = " ";
+	document.getElementById("interpolation").rows[2].cells[1].innerHTML = " "
+	document.getElementById("interpolation").rows[2].cells[2].innerHTML = " "
+	document.getElementById("interpolation").rows[2].cells[3].innerHTML = " "
+	document.getElementById("interpolation").rows[3].cells[1].innerHTML = " "
+	document.getElementById("interpolation").rows[3].cells[2].innerHTML = " "
+	document.getElementById("interpolation").rows[3].cells[3].innerHTML = " "
+	document.getElementById("interpolation").rows[4].cells[1].innerHTML = " "
+	document.getElementById("interpolation").rows[4].cells[2].innerHTML = " "
+	document.getElementById("interpolation").rows[4].cells[3].innerHTML = " "
 }
 	
 function calcVol(){

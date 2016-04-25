@@ -79,12 +79,6 @@ table{
 	padding: 7px;
 }
 
-.tdInt{
-	border: 1px black solid;
-	height: 25px;
-	width: 52px;
-}
-
 td{
 	height: 25px;
 	width: 110px
@@ -116,6 +110,19 @@ button:hover{
 div div div{
 	display: inline-block;
 	vertical-align: top;
+}
+
+
+#interpolation{
+	border: 0px;
+	border-collapse: collapse;
+}
+
+.tdInt{
+	border: 1px solid black;
+	height: 25px;
+	width: 54px;
+	text-align: center;
 }
 
 #errors{
