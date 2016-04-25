@@ -45,6 +45,9 @@ $(document).ready(function(){
 		$('#dilute').hide();
 		$('#convert').hide();
 		$('#proof').show();
+		$('#errorsDilute').hide();
+		$('#errorsConvert').hide();
+		$('#errorsProof').show();
 	});
 	$('#tabDilute').click(function(){
 		$('#aboutProof').hide();
@@ -53,6 +56,9 @@ $(document).ready(function(){
 		$('#proof').hide();
 		$('#convert').hide();
 		$('#dilute').show();
+		$('#errorsProof').hide();
+		$('#errorsConvert').hide();
+		$('#errorsDilute').show();
 	});
 	$('#tabConvert').click(function(){
 		$('#aboutProof').hide();
@@ -61,5 +67,8 @@ $(document).ready(function(){
 		$('#proof').hide();
 		$('#dilute').hide();
 		$('#convert').show();
+		$('#errorsProof').hide();
+		$('#errorsDilute').hide();
+		$('#errorsConvert').show();
 	});
 });

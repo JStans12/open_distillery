@@ -71,6 +71,27 @@
 </div>
 
 <div id="dilute">
+
+<table>
+	<th class="tTop"; colspan=2> Volume </th>
+		<tr>
+			<td>Proof</td>
+			<td class="in"><input type="text"; id="proofVol"></td>
+		</tr>
+		<tr>
+			<td>Weight (lbs)</td>
+			<td class="in"><input type="text"; id="weightVol"></td>
+		</tr>
+		<tr>
+			<td>Volume (L)</td>
+			<td class="out"; id="outVol"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcVol()">Calculate</button></td>
+		</tr>
+</table>
+
 <table>
 	<th class="tTop"; colspan=2> Dilute </th>
 		<tr>
@@ -105,37 +126,21 @@
 </div>
 	
 <div id="convert">
-<table>
-	<th class="tTop"; colspan=2> Volume </th>
-		<tr>
-			<td>Proof</td>
-			<td class="in"><input type="text"; id="proofVol"></td>
-		</tr>
-		<tr>
-			<td>Weight (lbs)</td>
-			<td class="in"><input type="text"; id="weightVol"></td>
-		</tr>
-		<tr>
-			<td>Volume (L)</td>
-			<td class="out"; id="outVol"></td>
-		</tr>
-		<tr>
-			<td></td>
-			<td><button onclick="calcVol()">Calculate</button></td>
-		</tr>
-</table>
+
 </div>
 	
-<p id="errors"></p>
+<p class= "errors"; id="errorsProof"></p>
+<p class= "errors"; id="errorsDilute"></p>
+<P class= "errors"; id="errorsConvert"></p>
 
 </div>
 
 <div id="about">
 <h2>About</h2>
 <hr>
-<p id="aboutProof">This calculator uses table_1 to correct proof readings based on temperature. Table_1 works with hydrometers that are calibrated at 60 degrees Fahrenheit and can handle most readings between 0 and 200 proof; from 1F to 100F. It is somewhat limited at very high and very low temperatures. You can find more information on this method in the <a href="https://www.ttb.gov/foia/gauging_manual_toc.shtml">TTB Gauging Manual</a>. You can view the source code for this calculator and download a typed version of table_1 <a href="https://github.com/JStans12/open_distillery.git">here</a>. I hand-typed this table and can't guarantee 100% accuracy. Please let me know if you find a mistake.</p>
-<p id="aboutDilute">aboutDilute asdfasdf asdfasdfas asdfasdfasd asdfasdfasdf</p>
-<p id="aboutConvert">aboutConvert oaisdhfoi oaisdhfioasd oiasdhfiha</p>
+<p id="aboutProof">This calculator uses Table 1 from the <a href="https://www.ttb.gov/foia/gauging_manual_toc.shtml">TTB Gauging Manual</a> to correct proof readings based on temperature. Table 1 works with hydrometers that are calibrated at 60 degrees Fahrenheit and can handle most readings between 0 and 200 proof; from 1F to 100F. It is somewhat limited at very high and very low temperatures. You can view the source code for this calculator and download a typed version of Table 1 <a href="https://github.com/JStans12/open_distillery.git">here</a>. This is a hand typed table. Please let me know if you find a mistake.</p>
+<p id="aboutDilute">A simple way to calculate diluting water.</p>
+<p id="aboutConvert">Unit conversions coming soon!</p>
 </div>
 
 </div>
