@@ -79,7 +79,7 @@ function calcDP(){
 	var outPGs = 2*((startingVolumeDP*0.264172)*((startingProofDP/2)/100));
 	var outWater = startingVolumeDP*((startingProofDP/finalProofDP)-1);
 	var outFinal = startingVolumeDP + outWater;
-	if(startingProofDP < 0 || finalProofDP < 0 || startingVolumeDP <0){
+	if(startingProofDP < 0 || finalProofDP < 0 || startingVolumeDP < 0){
 		document.getElementById("errorsDilute").innerHTML = "Proof and Volume must be positive.";
 		document.getElementById("outPGs").innerHTML = " ";
 		document.getElementById("outWater").innerHTML = " ";
@@ -115,29 +115,10 @@ function calcDPSP(){
 	var outPGsSP = 2*((startingVolumeDPSP*0.264172)*((startingProofDPSP/2)/100));
 	var outWaterSP = (startingVolumeDPSP*((startingProofDPSP/finalProofDPSP)-1))/((200-diluteProofDPSP)/200);
 	var outFinalSP = startingVolumeDPSP + outWaterSP;
-	if(startingProofDPSP < 0 || finalProofDPSP < 0 || startingVolumeDPSP <0){
-		document.getElementById("errorsDilute").innerHTML = "Proof and Volume must be positive.";
-		document.getElementById("outPGsSP").innerHTML = " ";
-		document.getElementById("outWaterSP").innerHTML = " ";
-		document.getElementById("outFinalSP").innerHTML = " ";
-	} else if(startingProofDPSP > 200 || finalProofDPSP > 200){
-		document.getElementById("errorsDilute").innerHTML = "Proof must be between 0-200.";
-		document.getElementById("outPGsSP").innerHTML = " ";
-		document.getElementById("outWaterSP").innerHTML = " ";
-		document.getElementById("outFinalSP").innerHTML = " ";
-	} else if(startingProofDPSP < finalProofDPSP){
-		document.getElementById("errorsDilute").innerHTML = "Starting Proof must be greater than Final Proof.";
-		document.getElementById("outPGsSP").innerHTML = " ";
-		document.getElementById("outWaterSP").innerHTML = " ";
-		document.getElementById("outFinalSP").innerHTML = " ";
-	} else if(isNaN(startingProofDPSP) || isNaN(finalProofDPSP) || isNaN(startingVolumeDPSP) || document.getElementById("startingProofDPSP").value === '' || document.getElementById("finalProofDPSP").value === '' || document.getElementById("startingVolumeDPSP").value === ''){
-		document.getElementById("errorsDilute").innerHTML = "Input is not a number.";
-		document.getElementById("outPGsSP").innerHTML = " ";
-		document.getElementById("outWaterSP").innerHTML = " ";
-		document.getElementById("outFinalSP").innerHTML = " ";
-	} else {
-		document.getElementById("outPGsSP").innerHTML = outPGs.toFixed(2);
-		document.getElementById("outWaterSP").innerHTML = outWater.toFixed(2);
-		document.getElementById("outFinalSP").innerHTML = outFinal.toFixed(2);
+	var foutPGsSP = 2*((outWaterSP*0.264172)*((diluteProofDPSP/2)/100)) + outPGsSP;
+		document.getElementById("outPGsSP").innerHTML = outPGsSP.toFixed(2);
+		document.getElementById("outWaterSP").innerHTML = outWaterSP.toFixed(2);
+		document.getElementById("outFinalSP").innerHTML = outFinalSP.toFixed(2);
+		document.getElementById("foutPGsSP").innerHTML = foutPGsSP.toFixed(2);
 		document.getElementById("errorsDilute").innerHTML = " ";
 }
