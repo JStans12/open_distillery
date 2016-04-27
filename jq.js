@@ -4,7 +4,7 @@ $(document).ready(function(){
 			calcVol();
 		}
 	});
-	$('#startingVolumeDP').keypress(function(key){
+	$('#finalProofDP').keypress(function(key){
 		if( key.which === 13){
 			calcDP();
 		}

@@ -3,9 +3,8 @@ function calcTP(){
 	if(isNaN(hydrometerTP)){
 		document.getElementById("errorsProof").innerHTML = "Input is not a number.";
 		errorTP();
-	}
-	if(hydrometerTP > 203 || hydrometerTP < 0){
-		document.getElementById("errorsProof").innerHTML = "Your readings are outside the working range of table_1.";
+	} else if (hydrometerTP > 203 || hydrometerTP < 0){
+		document.getElementById("errorsProof").innerHTML = "Your readings are outside the working range of Table 1.";
 		errorTP();
 	}
 	var iHydrometerTP = Math.trunc(hydrometerTP);
@@ -23,7 +22,7 @@ function calcTP(){
 		document.getElementById("errorsProof").innerHTML = "Input is not a number.";
 		errorTP();
 	} else if(PT === 0 || PoT === 0 || PTo === 0){
-		document.getElementById("errorsProof").innerHTML = "Your readings are outside the working range of table_1.";
+		document.getElementById("errorsProof").innerHTML = "Your readings are outside the working range of Table 1.";
 		errorTP();
 	} else {
 		document.getElementById("outTP").innerHTML = (PT+(fHydrometerTP*(PoT-PT))-(fThermometerTP*Math.abs(PTo-PT))).toFixed(1);
@@ -105,20 +104,4 @@ function calcDP(){
 		document.getElementById("outFinal").innerHTML = outFinal.toFixed(2);
 		document.getElementById("errorsDilute").innerHTML = " ";
 	}
-}
-
-function calcDPSP(){
-	var startingProofDPSP = +document.getElementById("startingProofDPSP").value;
-	var finalProofDPSP = +document.getElementById("finalProofDPSP").value;
-	var diluteProofDPSP = +document.getElementById("diluteProofDPSP").value;
-	var startingVolumeDPSP = +document.getElementById("startingVolumeDPSP").value;
-	var outPGsSP = 2*((startingVolumeDPSP*0.264172)*((startingProofDPSP/2)/100));
-	var outWaterSP = (startingVolumeDPSP*((startingProofDPSP/finalProofDPSP)-1))/((200-diluteProofDPSP)/200);
-	var outFinalSP = startingVolumeDPSP + outWaterSP;
-	var foutPGsSP = 2*((outWaterSP*0.264172)*((diluteProofDPSP/2)/100)) + outPGsSP;
-		document.getElementById("outPGsSP").innerHTML = outPGsSP.toFixed(2);
-		document.getElementById("outWaterSP").innerHTML = outWaterSP.toFixed(2);
-		document.getElementById("outFinalSP").innerHTML = outFinalSP.toFixed(2);
-		document.getElementById("foutPGsSP").innerHTML = foutPGsSP.toFixed(2);
-		document.getElementById("errorsDilute").innerHTML = " ";
 }

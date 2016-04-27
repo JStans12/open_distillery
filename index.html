@@ -14,7 +14,7 @@
 <div id="header">
 <div id="banner"><h1>Open Distillery</h1></div>
 <div class="tab"; id="tabProof"><p class="tabTitle">Proof</p></div>
-<div class="tab"; id="tabDilute"><p class="tabTitle">Dilute</p></div>
+<div class="tab"; id="tabDilute"><p class="tabTitle">Blend</p></div>
 <div class="tab"; id="tabConvert"><p class="tabTitle">Convert</p></div>
 </div>
 
@@ -72,7 +72,11 @@
 
 <div id="dilute">
 <table>
-	<th class="tTop"; colspan=2> Dilute with Water </th>
+	<th class="tTop"; colspan=2> Dilute </th>
+		<tr>
+			<td>Starting Volume (L)</td>
+			<td class="in"><input type="text"; id="startingVolumeDP"></td>
+		</tr>
 		<tr>
 			<td>Starting Proof</td>
 			<td class="in"><input type="text"; id="startingProofDP"></td>
@@ -82,16 +86,12 @@
 			<td class="in"><input type="text"; id="finalProofDP"></td>
 		</tr>
 		<tr>
-			<td>Starting Volume (L)</td>
-			<td class="in"><input type="text"; id="startingVolumeDP"></td>
+			<td>Water to Add</td>
+			<td class="out"; id="outWater"></td>
 		</tr>
 		<tr>
 			<td>Final Volume (L)</td>
 			<td class="out"; id="outFinal"></td>
-		</tr>
-		<tr>
-			<td>Water to Add</td>
-			<td class="out"; id="outWater"></td>
 		</tr>
 		<tr>
 			<td>Proof Gallons</td>
@@ -103,44 +103,28 @@
 		</tr>
 </table>
 <table>
-	<th class="tTop"; colspan=2> Dilute with Spirit </th>
+	<th class="tTop"; colspan=2> Mingle </th>
 		<tr>
-			<td>Starting Proof</td>
-			<td class="in"><input type="text"; id="startingProofDPSP"></td>
+			<td>Spirit A Proof</td>
+			<td class="in"><input type="text"; id="spiritA"></td>
+		</tr>
+		<tr>
+			<td>Spirit B Proof</td>
+			<td class="in"><input type="text"; id="spiritB"></td>
 		</tr>
 		<tr>
 			<td>Final Proof</td>
-			<td class="in"><input type="text"; id="finalProofDPSP"></td>
-		</tr>
-		<tr>
-			<td>Starting Volume (L)</td>
-			<td class="in"><input type="text"; id="startingVolumeDPSP"></td>
-		</tr>
-		<tr>
-			<td>Dilution Spirit Proof</td>
-			<td class="in"><input type="text"; id="diluteProofDPSP"></td>
-		</tr>
-		<tr>
-			<td>Final Volume (L)</td>
-			<td class="out"; id="outFinalSP"></td>
-		</tr>
-		<tr>
-			<td>Dilution Spirit to Add</td>
-			<td class="out"; id="outWaterSP"></td>
-		</tr>
-		<tr>
-			<td>Start Proof Gallons</td>
-			<td class="out"; id="outPGsSP"></td>
-		</tr>
-		<tr>
-			<td>Final Proof Gallons</td>
-			<td class="out"; id="foutPGsSP";></td>
+			<td class="in"><input type="text"; id="mingleFinal"></td>
 		</tr>
 		<tr>
 			<td></td>
-			<td><button onclick="calcDPSP()">Calculate</button></td>
+			<td><button onclick="calcMing()">Calculate</button></td>
+		</tr>
+		<tr>
+			<td><p>For 1 liter A Need 12 Liters B</p></td>
 		</tr>
 </table>
+
 </div>
 	
 <div id="convert">
