@@ -1,3 +1,5 @@
+// press enter to trigger fucntions
+
 $(document).ready(function(){
 	$('#weightVol').keypress(function(key){
 		if( key.which === 13){
@@ -16,6 +18,8 @@ $(document).ready(function(){
 	});
 });
 
+// starting position
+
 $(document).ready(function(){
 	$('#tabProof').addClass('tabActive');
 	$('#aboutDilute').hide();
@@ -23,6 +27,8 @@ $(document).ready(function(){
 	$('#dilute').hide();
 	$('#convert').hide();
 });
+
+// hover over tabs
 
 $(document).ready(function(){
 	$('.tab').mouseenter(function(){
@@ -36,6 +42,8 @@ $(document).ready(function(){
 		$(this).addClass('tabActive');
 	});
 });
+
+// click tabs
 
 $(document).ready(function(){
 	$('#tabProof').click(function(){

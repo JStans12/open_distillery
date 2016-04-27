@@ -1,3 +1,5 @@
+// table 1 calculator
+
 function calcTP(){
 	var hydrometerTP = +document.getElementById("hydrometerTP").value;
 	if(isNaN(hydrometerTP)){
@@ -51,6 +53,8 @@ function errorTP(){
 	document.getElementById("interpolation").rows[4].cells[2].innerHTML = " "
 	document.getElementById("interpolation").rows[4].cells[3].innerHTML = " "
 }
+
+// Volume by weight
 	
 function calcVol(){
 	var proofVol = +document.getElementById("proofVol").value;
@@ -70,6 +74,8 @@ function calcVol(){
 		document.getElementById("errorsDilute").innerHTML = " ";
 	}
 }
+
+// Dilute
 	
 function calcDP(){
 	var startingProofDP = +document.getElementById("startingProofDP").value;
