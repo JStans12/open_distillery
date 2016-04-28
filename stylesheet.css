@@ -90,6 +90,11 @@ input{
 	text-align: right;
 }
 
+.inMing{
+	width: 44px;
+	text-align: right;
+}
+
 button{
 	border-radius: 5px;
 	float: right;
@@ -123,6 +128,16 @@ div div div{
 	height: 25px;
 	width: 54px;
 	text-align: center;
+}
+
+#ming{
+
+}
+
+.trMing td{
+	border:;
+	height: 25px;
+	width: 52px;
 }
 
 .errors{
