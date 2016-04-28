@@ -105,7 +105,12 @@ function calcDP(){
 // mingle
 
 function calcMing(){
-	
+	var spiritA = +document.getElementById("spiritA").value;
+	var spiritB = +document.getElementById("spiritB").value;
+	var mingleFinal = +document.getElementById("mingleFinal").value;
+	var ratio = (1/(Math.abs(spiritA-mingleFinal)/Math.abs(spiritB-mingleFinal))).toFixed(2);
+		document.getElementById("mingA").value = 1;
+		document.getElementById("mingB").value = ratio;
 }
 
 function calcMingA(){
