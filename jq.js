@@ -1,10 +1,12 @@
+// press enter to trigger fucntions
+
 $(document).ready(function(){
 	$('#weightVol').keypress(function(key){
 		if( key.which === 13){
 			calcVol();
 		}
 	});
-	$('#startingVolumeDP').keypress(function(key){
+	$('#finalProofDP').keypress(function(key){
 		if( key.which === 13){
 			calcDP();
 		}
@@ -14,7 +16,24 @@ $(document).ready(function(){
 			calcTP();
 		}
 	});
+	$('#mingleFinal').keypress(function(key){
+		if( key.which === 13){
+			calcMing();
+		}
+	});
+	$('#mingA').keypress(function(key){
+		if( key.which === 13){
+			calcMingA();
+		}
+	});
+	$('#mingB').keypress(function(key){
+		if( key.which === 13){
+			calcMingB();
+		}
+	});
 });
+
+// starting position
 
 $(document).ready(function(){
 	$('#tabProof').addClass('tabActive');
@@ -23,6 +42,8 @@ $(document).ready(function(){
 	$('#dilute').hide();
 	$('#convert').hide();
 });
+
+// hover over tabs
 
 $(document).ready(function(){
 	$('.tab').mouseenter(function(){
@@ -36,6 +57,8 @@ $(document).ready(function(){
 		$(this).addClass('tabActive');
 	});
 });
+
+// click tabs
 
 $(document).ready(function(){
 	$('#tabProof').click(function(){
