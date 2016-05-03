@@ -108,18 +108,81 @@ function calcMing(){
 	var spiritA = +document.getElementById("spiritA").value;
 	var spiritB = +document.getElementById("spiritB").value;
 	var mingleFinal = +document.getElementById("mingleFinal").value;
-	var ratio = (1/(Math.abs(spiritA-mingleFinal)/Math.abs(spiritB-mingleFinal))).toFixed(2);
-		document.getElementById("mingA").value = 1;
-		document.getElementById("mingB").value = ratio;
+	if(spiritA > 200 || spiritA < 0 || spiritB > 200 || spiritB < 0){
+		document.getElementById("errorsDilute").innerHTML = "Proof must be between 0-200.";
+		errorMing();
+	} else if(isNaN(spiritA) || isNaN(spiritB) || isNaN(mingleFinal) || document.getElementById("spiritA").value === '' || document.getElementById("spiritB").value === '' || document.getElementById("mingleFinal").value === ''){
+		document.getElementById("errorsDilute").innerHTML = "Input is not a number.";
+		errorMing();
+	} else if(spiritA >= mingleFinal && spiritB >= mingleFinal || spiritA <= mingleFinal && spiritB <= mingleFinal){
+		document.getElementById("errorsDilute").innerHTML = "Final Proof must be between Spirit A and Spirit B.";
+		errorMing();
+	} else {
+		var ratio = (1/(Math.abs(spiritB-mingleFinal)/Math.abs(spiritA-mingleFinal))).toFixed(2);
+			document.getElementById("mingA").value = 1;
+			document.getElementById("mingB").value = ratio;
+			document.getElementById("errorsDilute").innerHTML = " ";
+	}	
 }
 
 function calcMingA(){
-	
+	var spiritA = +document.getElementById("spiritA").value;
+	var spiritB = +document.getElementById("spiritB").value;
+	var mingleFinal = +document.getElementById("mingleFinal").value;
+	if(spiritA > 200 || spiritA < 0 || spiritB > 200 || spiritB < 0){
+		document.getElementById("errorsDilute").innerHTML = "Proof must be between 0-200.";
+		errorMing();
+	} else if(isNaN(spiritA) || isNaN(spiritB) || isNaN(mingleFinal) || document.getElementById("spiritA").value === '' || document.getElementById("spiritB").value === '' || document.getElementById("mingleFinal").value === ''){
+		document.getElementById("errorsDilute").innerHTML = "Input is not a number.";
+		errorMing();
+	} else if(spiritA >= mingleFinal && spiritB >= mingleFinal || spiritA <= mingleFinal && spiritB <= mingleFinal){
+		document.getElementById("errorsDilute").innerHTML = "Final Proof must be between Spirit A and Spirit B.";
+		errorMing();
+	} else {
+		var mingA = +document.getElementById("mingA").value;
+		if(isNaN(mingA) || document.getElementById("mingA").value === '' || mingA <=0){
+			document.getElementById("mingB").value = " ";
+			document.getElementById("errorsDilute").innerHTML = "Spirit A must be a positive number.";
+		} else {
+		var ratio = (1/(Math.abs(spiritB-mingleFinal)/Math.abs(spiritA-mingleFinal))).toFixed(2);
+			document.getElementById("mingB").value = (ratio*mingA).toFixed(2);
+			document.getElementById("errorsDilute").innerHTML = " ";
+		}
+	}	
 }
 
 function calcMingB(){
-	
+	var spiritA = +document.getElementById("spiritA").value;
+	var spiritB = +document.getElementById("spiritB").value;
+	var mingleFinal = +document.getElementById("mingleFinal").value;
+	if(spiritA > 200 || spiritA < 0 || spiritB > 200 || spiritB < 0){
+		document.getElementById("errorsDilute").innerHTML = "Proof must be between 0-200.";
+		errorMing();
+	} else if(isNaN(spiritA) || isNaN(spiritB) || isNaN(mingleFinal) || document.getElementById("spiritA").value === '' || document.getElementById("spiritB").value === '' || document.getElementById("mingleFinal").value === ''){
+		document.getElementById("errorsDilute").innerHTML = "Input is not a number.";
+		errorMing();
+	} else if(spiritA >= mingleFinal && spiritB >= mingleFinal || spiritA <= mingleFinal && spiritB <= mingleFinal){
+		document.getElementById("errorsDilute").innerHTML = "Final Proof must be between Spirit A and Spirit B.";
+		errorMing();
+	} else {
+		var mingB = +document.getElementById("mingB").value;
+		if(isNaN(mingB) || document.getElementById("mingB").value === '' || mingB <=0){
+			document.getElementById("mingA").value = " ";
+			document.getElementById("errorsDilute").innerHTML = "Spirit B must be a positive number.";
+		} else {
+		var ratio = (1/(Math.abs(spiritB-mingleFinal)/Math.abs(spiritA-mingleFinal))).toFixed(2);
+			document.getElementById("mingA").value = (mingB/ratio).toFixed(2);
+			document.getElementById("errorsDilute").innerHTML = " ";
+		}	
+	}
 }
+
+
+function errorMing(){
+	document.getElementById("mingA").value = " ";
+	document.getElementById("mingB").value = " ";
+}
+
 
 // Volume by weight
 	

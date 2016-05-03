@@ -16,6 +16,21 @@ $(document).ready(function(){
 			calcTP();
 		}
 	});
+	$('#mingleFinal').keypress(function(key){
+		if( key.which === 13){
+			calcMing();
+		}
+	});
+	$('#mingA').keypress(function(key){
+		if( key.which === 13){
+			calcMingA();
+		}
+	});
+	$('#mingB').keypress(function(key){
+		if( key.which === 13){
+			calcMingB();
+		}
+	});
 });
 
 // starting position
