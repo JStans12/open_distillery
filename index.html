@@ -137,8 +137,35 @@
 </div>
 	
 <div id="convert">
+<div id="tableCon">
 <table>
 	<th class="tTop"; colspan=2> Volume </th>
+		<tr>
+			<td class="in"><input class="inCon"; type="text"; id="vConVal"></td>
+			<td class="in">
+				<select class="sel"; id="vConKn">
+					<option value="liters">Liters</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2; style="text-align: center">Equals</td>
+		</tr>
+		<tr>
+			<td class="out"; id="outVCon"></td>
+			<td class="in">
+				<select class="sel"; id="vConUn">
+					<option value="liters">Liters</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcVCon()">Calculate</button></td>
+		</tr>
+</table>
+<table>
+	<th class="tTop"; colspan=2> Volume by Weight </th>
 		<tr>
 			<td>Proof</td>
 			<td class="in"><input type="text"; id="proofVol"></td>
@@ -154,6 +181,33 @@
 		<tr>
 			<td></td>
 			<td><button onclick="calcVol()">Calculate</button></td>
+		</tr>
+</table>
+</div>
+<table>
+	<th class="tTop"; colspan=2> Weight </th>
+		<tr>
+			<td class="in"><input class="inCon"; type="text"; id="wConVal"></td>
+			<td class="in">
+				<select class="sel"; id="wConKn">
+					<option value="liters">Lbs</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2; style="text-align: center">Equals</td>
+		</tr>
+		<tr>
+			<td class="out"; id="outWCon"></td>
+			<td class="in">
+				<select class="sel"; id="wConUn">
+					<option value="liters">Liters</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcWCon()">Calculate</button></td>
 		</tr>
 </table>
 </div>
