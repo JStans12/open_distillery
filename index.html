@@ -145,6 +145,9 @@
 			<td class="in">
 				<select class="sel"; id="vConKn">
 					<option value="liters">Liters</option>
+					<option value="gallons">US Gallons</option>
+					<option value="bottle">750ml bottles</option>
+					<option value="eubottle">700ml bottles</option>
 				</select>
 			</td>
 		</tr>
@@ -156,6 +159,9 @@
 			<td class="in">
 				<select class="sel"; id="vConUn">
 					<option value="liters">Liters</option>
+					<option value="gallons">US Gallons</option>
+					<option value="bottle">750ml bottles</option>
+					<option value="eubottle">700ml bottles</option>
 				</select>
 			</td>
 		</tr>
@@ -190,7 +196,10 @@
 			<td class="in"><input class="inCon"; type="text"; id="wConVal"></td>
 			<td class="in">
 				<select class="sel"; id="wConKn">
-					<option value="liters">Lbs</option>
+					<option value="lbs">Lbs</option>
+					<option value="ounces">Ounces</option>
+					<option value="kilograms">Kilograms</option>
+					<option value="grams">Grams</option>
 				</select>
 			</td>
 		</tr>
@@ -201,7 +210,10 @@
 			<td class="out"; id="outWCon"></td>
 			<td class="in">
 				<select class="sel"; id="wConUn">
-					<option value="liters">Liters</option>
+					<option value="lbs">Lbs</option>
+					<option value="ounces">Ounces</option>
+					<option value="kilograms">Kilograms</option>
+					<option value="grams">Grams</option>
 				</select>
 			</td>
 		</tr>
@@ -223,7 +235,7 @@
 <hr>
 <p id="aboutProof">This calculator uses Table 1 from the <a href="https://www.ttb.gov/foia/gauging_manual_toc.shtml">TTB Gauging Manual</a> to correct proof readings based on temperature. Table 1 works with hydrometers that are calibrated at 60 degrees Fahrenheit and can handle most readings between 0 and 200 proof; from 1F to 100F. It is limited at very high and very low temperatures. You can view the source code for this calculator and download a typed version of Table 1 <a href="https://github.com/JStans12/open_distillery.git">here</a>. This is a hand typed table. Let me know if you find a mistake.</p>
 <p id="aboutDilute">These functions use the pearsons square method (weighted average) to calculate blending. They do not take into account the shrinkage that occurs when ethanol and water are mixed and therefor cannot be perfectly accurate. However, the results will be close enough for most distillers.</p>
-<p id="aboutConvert">More conversions coming soon!</p>
+<p id="aboutConvert">Quickly convert between common weight and volume units and determine the volume of a spirit based on it's weight. Like the blending calculators, volume by weight is calclulated with a weighted average.</p>
 </div>
 
 </div>
