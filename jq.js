@@ -31,6 +31,16 @@ $(document).ready(function(){
 			calcMingB();
 		}
 	});
+	$('#vConVal').keypress(function(key){
+		if( key.which === 13){
+			calcVCon();
+		}
+	});
+	$('#wConVal').keypress(function(key){
+		if( key.which === 13){
+			calcWCon();
+		}
+	});
 });
 
 // starting position

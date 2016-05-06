@@ -183,6 +183,37 @@ function errorMing(){
 	document.getElementById("mingB").value = " ";
 }
 
+// Convert volume
+
+function calcVCon(){
+	var vConVal = +document.getElementById("vConVal").value;
+	if (isNaN(vConVal) || document.getElementById("vConVal").value === ''){
+		document.getElementById("errorsConvert").innerHTML = "Input is not a number."
+		document.getElementById("outVCon").innerHTML = " "
+	} else {
+	var vConKn = document.getElementById("vConKn");
+	var vConKnVal = +vConKn.options[vConKn.selectedIndex].value;
+	var vConUn = document.getElementById("vConUn");
+	var vConUnVal = +vConUn.options[vConUn.selectedIndex].value;
+	document.getElementById("outVCon").innerHTML = (vConVal*vConKnVal/vConUnVal).toFixed(3);
+	}
+}
+
+// Convert weight
+
+function calcWCon(){
+	var wConVal = +document.getElementById("wConVal").value;
+	if (isNaN(wConVal) || document.getElementById("wConVal").value === ''){
+		document.getElementById("errorsConvert").innerHTML = "Input is not a number."
+		document.getElementById("outWCon").innerHTML = " "
+	} else {
+	var wConKn = document.getElementById("wConKn");
+	var wConKnVal = +wConKn.options[wConKn.selectedIndex].value;
+	var wConUn = document.getElementById("wConUn");
+	var wConUnVal = +wConUn.options[wConUn.selectedIndex].value;
+	document.getElementById("outWCon").innerHTML = (wConVal*wConKnVal/wConUnVal).toFixed(3);
+	}
+}
 
 // Volume by weight
 	
