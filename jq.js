@@ -41,6 +41,11 @@ $(document).ready(function(){
 			calcWCon();
 		}
 	});
+	$('#volumePGs').keypress(function(key){
+		if( key.which === 13){
+			calcProofGallons();
+		}
+	});
 });
 
 // starting position

@@ -222,6 +222,25 @@
 			<td><button onclick="calcWCon()">Calculate</button></td>
 		</tr>
 </table>
+<table>
+	<th class="tTop" colspan=2> Proof Gallons </th>
+		<tr>
+			<td>Proof</td>
+			<td class="in"><input type="text"; id="proofPGs"></td>
+		</tr>
+		<tr>
+			<td>Volume (L)</td>
+			<td class="in"><input type="text"; id="volumePGs"></td>
+		</tr>
+		<tr>
+			<td>Proof Gallons</td>
+			<td class="out"; id="outProofGallons"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><button onclick="calcProofGallons()">Calculate</button></td>
+		</tr>
+</table>
 </div>
 	
 <p class= "errors"; id="errorsProof"></p>
@@ -235,7 +254,7 @@
 <hr>
 <p id="aboutProof">This calculator uses Table 1 from the <a href="https://www.ttb.gov/foia/gauging_manual_toc.shtml">TTB Gauging Manual</a> to correct proof readings based on temperature. Table 1 works with hydrometers that are calibrated at 60 degrees Fahrenheit and can handle most readings between 0 and 200 proof; from 1F to 100F. It is limited at very high and very low temperatures. You can view the source code for this calculator and download a typed version of Table 1 <a href="https://github.com/JStans12/open_distillery.git">here</a>. This is a hand typed table. Let me know if you find a mistake.</p>
 <p id="aboutDilute">These functions use the pearsons square method (weighted average) to calculate blending. They do not take into account the shrinkage that occurs when ethanol and water are mixed and therefor cannot be perfectly accurate. However, the results will be close enough for most distillers.</p>
-<p id="aboutConvert">Quickly convert between common weight and volume units and determine the volume of a spirit based on it's weight. Like the blending calculators, volume by weight is calclulated with a weighted average.</p>
+<p id="aboutConvert">Quickly convert between common weight and volume units, determine the volume of a spirit based on it's weight and calculate proof gallons. Like the blending calculators, volume by weight and proof gallons are calclulated with a weighted average.</p>
 </div>
 
 </div>

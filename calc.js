@@ -235,3 +235,24 @@ function calcVol(){
 		document.getElementById("errorsConvert").innerHTML = " ";
 	}
 }
+
+// Proof Gallons
+
+function calcProofGallons(){
+	var proofPGs = +document.getElementById("proofPGs").value;
+	var volumePGs = +document.getElementById("volumePGs").value;
+	if(proofPGs > 200 || proofPGs < 0){
+		document.getElementById("errorsConvert").innerHTML = "Proof must be between 0-200.";
+		document.getElementById("outProofGallons").innerHTML = " ";
+	} else if(volumePGs < 0){
+		document.getElementById("errorsConvert").innerHTML = "Volume must be positive.";
+		document.getElementById("outProofGallons").innerHTML = " ";
+	} else if(isNaN(proofPGs) || isNaN(volumePGs) || document.getElementById("proofPGs").value === '' || document.getElementById("volumePGs").value === ''){
+		document.getElementById("errorsConvert").innerHTML = "Input is not a number.";
+		document.getElementById("outProofGallons").innerHTML = " ";
+	} else {
+		var outProofGallons = 2*((volumePGs*0.264172)*((proofPGs/2)/100));
+	 	document.getElementById("outProofGallons").innerHTML = outProofGallons.toFixed(2);
+		document.getElementById("errorsConvert").innerHTML = " ";
+	}
+}
