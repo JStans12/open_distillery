@@ -31,6 +31,21 @@ $(document).ready(function(){
 			calcMingB();
 		}
 	});
+	$('#vConVal').keypress(function(key){
+		if( key.which === 13){
+			calcVCon();
+		}
+	});
+	$('#wConVal').keypress(function(key){
+		if( key.which === 13){
+			calcWCon();
+		}
+	});
+	$('#volumePGs').keypress(function(key){
+		if( key.which === 13){
+			calcProofGallons();
+		}
+	});
 });
 
 // starting position

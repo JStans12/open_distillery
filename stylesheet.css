@@ -95,6 +95,11 @@ input{
 	text-align: right;
 }
 
+.inCon{
+	width: 90px;
+	margin: 0px 0px 0px 10px;
+}
+
 button{
 	border-radius: 5px;
 	float: right;
@@ -103,6 +108,11 @@ button{
 
 button:hover{
 	background: LightGray;
+}
+
+.sel{
+	width: 100px;
+	text-align: center;
 }
 
 .out{
@@ -130,14 +140,14 @@ div div div{
 	text-align: center;
 }
 
-#ming{
-
-}
-
 .trMing td{
 	border:;
 	height: 25px;
 	width: 52px;
+}
+
+#tableCon{
+	display: block;
 }
 
 .errors{

@@ -183,6 +183,37 @@ function errorMing(){
 	document.getElementById("mingB").value = " ";
 }
 
+// Convert volume
+
+function calcVCon(){
+	var vConVal = +document.getElementById("vConVal").value;
+	if (isNaN(vConVal) || document.getElementById("vConVal").value === ''){
+		document.getElementById("errorsConvert").innerHTML = "Input is not a number."
+		document.getElementById("outVCon").innerHTML = " "
+	} else {
+	var vConKn = document.getElementById("vConKn");
+	var vConKnVal = +vConKn.options[vConKn.selectedIndex].value;
+	var vConUn = document.getElementById("vConUn");
+	var vConUnVal = +vConUn.options[vConUn.selectedIndex].value;
+	document.getElementById("outVCon").innerHTML = (vConVal*vConKnVal/vConUnVal).toFixed(3);
+	}
+}
+
+// Convert weight
+
+function calcWCon(){
+	var wConVal = +document.getElementById("wConVal").value;
+	if (isNaN(wConVal) || document.getElementById("wConVal").value === ''){
+		document.getElementById("errorsConvert").innerHTML = "Input is not a number."
+		document.getElementById("outWCon").innerHTML = " "
+	} else {
+	var wConKn = document.getElementById("wConKn");
+	var wConKnVal = +wConKn.options[wConKn.selectedIndex].value;
+	var wConUn = document.getElementById("wConUn");
+	var wConUnVal = +wConUn.options[wConUn.selectedIndex].value;
+	document.getElementById("outWCon").innerHTML = (wConVal*wConKnVal/wConUnVal).toFixed(3);
+	}
+}
 
 // Volume by weight
 	
@@ -201,6 +232,27 @@ function calcVol(){
 		document.getElementById("outVol").innerHTML = " ";
 	} else {
 		document.getElementById("outVol").innerHTML = outVol.toFixed(2);
+		document.getElementById("errorsConvert").innerHTML = " ";
+	}
+}
+
+// Proof Gallons
+
+function calcProofGallons(){
+	var proofPGs = +document.getElementById("proofPGs").value;
+	var volumePGs = +document.getElementById("volumePGs").value;
+	if(proofPGs > 200 || proofPGs < 0){
+		document.getElementById("errorsConvert").innerHTML = "Proof must be between 0-200.";
+		document.getElementById("outProofGallons").innerHTML = " ";
+	} else if(volumePGs < 0){
+		document.getElementById("errorsConvert").innerHTML = "Volume must be positive.";
+		document.getElementById("outProofGallons").innerHTML = " ";
+	} else if(isNaN(proofPGs) || isNaN(volumePGs) || document.getElementById("proofPGs").value === '' || document.getElementById("volumePGs").value === ''){
+		document.getElementById("errorsConvert").innerHTML = "Input is not a number.";
+		document.getElementById("outProofGallons").innerHTML = " ";
+	} else {
+		var outProofGallons = 2*((volumePGs*0.264172)*((proofPGs/2)/100));
+	 	document.getElementById("outProofGallons").innerHTML = outProofGallons.toFixed(2);
 		document.getElementById("errorsConvert").innerHTML = " ";
 	}
 }
